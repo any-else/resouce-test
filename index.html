@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <h1>Quản trị danh mục sản phẩm</h1>
+
+  <h2>Thêm mới danh mục sản phẩm</h2>
+  <form id="addCatalogForm">
+    <label for="catalogId">Mã danh mục sản phẩm:</label>
+    <input type="text" id="catalogId" required>
+
+    <label for="catalogName">Tên danh mục sản phẩm:</label>
+    <input type="text" id="catalogName" required>
+
+    <label for="priority">Độ ưu tiên:</label>
+    <input type="number" id="priority" required>
+
+    <label for="descriptions">Mô tả:</label>
+    <textarea id="descriptions" required></textarea>
+
+    <label for="status">Trạng thái:</label>
+    <input type="text" id="status" required>
+
+    <button type="submit">Thêm mới</button>
+  </form>
+
+  <h2>Tìm kiếm danh mục sản phẩm</h2>
+  <form id="searchCatalogForm">
+    <label for="searchName">Tên danh mục sản phẩm:</label>
+    <input type="text" id="searchName">
+
+    <button type="submit">Tìm kiếm</button>
+  </form>
+
+  <h2>Danh sách danh mục sản phẩm</h2>
+  <div id="catalogList"></div>
+  <div id="pagination"></div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

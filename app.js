@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const addCatalogForm = document.getElementById("addCatalogForm");
   const searchCatalogForm = document.getElementById("searchCatalogForm");
   const catalogList = document.getElementById("catalogList");
+  let pagination = document.getElementById("pagination");
 
   // Hiển thị danh sách danh mục sản phẩm
   function displayCatalogs(page) {
@@ -13,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const startIndex = (page - 1) * catalogsPerPage;
     const endIndex = startIndex + catalogsPerPage;
     const paginatedCatalogs = listCatalog.slice(startIndex, endIndex);
-
     catalogList.innerHTML = "";
 
     paginatedCatalogs.forEach(function (catalog) {
@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
         <button class="editBtn" data-catalogid="${catalog.catalogId}">Cập nhật</button>
         <button class="deleteBtn" data-catalogid="${catalog.catalogId}">Xóa</button>
       `;
-
       catalogList.appendChild(row);
       displayPagination(page);
     });
@@ -157,5 +156,5 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Phân trang dữ liệu hiển thị
-  displayCatalogs(1);
+  displayCatalogs(2);
 });
